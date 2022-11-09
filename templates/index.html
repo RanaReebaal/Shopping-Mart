@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/index" method="GET">
+
+            {% csrf_token %}
+            <div class="row" <center>
+                <h2 id="monthly">Monthly Membership</h2>
+                </center>
+                <div class="col-50">
+                    <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                    <input type="text" id="fname" name="u_name" placeholder="John M. Doe">
+                    <label for="city"><i class="fa fa-institution"></i> City</label>
+                    <input type="text" id="city" name="u_city" placeholder="New York">
+                    <div class="row">
+                        <div class="col-50">
+                            <label for="state">Job</label>
+                            <input type="text" id="state" name="u_job" placeholder="NY">
+                        </div>
+                        <div class="col-50">
+                            <label for="zip">Age</label>
+                            <input type="text" id="zip" name="u_age" placeholder="10001">
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Continue to checkout" class="btn">
+                <div id="output">
+                    <h1 class="text">
+                        Congratulations
+                        {{user_name}}
+                        you are now our family
+                    </h1>
+                </div>
+        </form>
+    </div>
+</body>
+
+</html>

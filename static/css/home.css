@@ -1,0 +1,724 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-weight: bolder;
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    /* https://images.unsplash.com/photo-1582634424802-b4a94fcfbce6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGhvdG9zaG9wfGVufDB8fDB8fA%3D%3D&w=1000&q=80 */
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url('https://free4kwallpapers.com/uploads/originals/2022/08/28/porsche-wallpaper.jpg'); */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#additembut{
+  width: 200px;
+  height: 50px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* 
+==============================================================================
+********************************************************************************
+********************************************************************************
+
+*/
+
+#main1{
+  width:  100vw;
+  /* height: 90%; */
+  /* 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9RHO9AgLJJaI20PTZwGTDQkWXS3sEFEG0mEzLxTHc5kzrZz-HkraiIKvCuYAWQSEV-xo&usqp=CAU */
+  /* background-image: url('https://free4kwallpapers.com/uploads/originals/2022/08/28/porsche-wallpaper.jpg'); */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+  rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  padding: 2px; 
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 80px 200px 200px 300px;
+  grid-gap: 5px;
+}
+
+.article1,
+.article2,
+.article3{
+    color: rgb(0, 0, 0);
+    /* color: rgb(255, 0, 0); */
+
+}
+
+.div{
+  width: 100%;
+  height: 900px;
+  background-color: rgb(162, 30, 169);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/* 
+==============================================================================
+********************************************************************************
+********************************************************************************
+
+*/
+
+
+#hero{
+     width:  100vw;
+     /* height: 90%; */
+     /* 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9RHO9AgLJJaI20PTZwGTDQkWXS3sEFEG0mEzLxTHc5kzrZz-HkraiIKvCuYAWQSEV-xo&usqp=CAU */
+     /* background-image: url('https://free4kwallpapers.com/uploads/originals/2022/08/28/porsche-wallpaper.jpg'); */
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+     /* padding: 12px;  */
+     display: grid;
+     grid-template-columns: repeat(6, 1fr);
+     grid-template-rows: 80px 200px 200px 300px;
+     grid-gap: 10px;
+}
+.first{
+    width:  100vw;
+    padding: 12px; 
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 80px 200px 200px 300px;
+    grid-gap: 20px;
+}
+.second{
+    width:  100vw;
+    padding: 12px; 
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 80px 200px 200px 300px;
+    grid-gap: 20px;
+}
+
+nav{
+    border-radius: 10px;
+    background-image: url('data:image/jpeg;base64,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');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    grid-column: 1 / -1;
+    color: chartreuse;
+}
+aside{
+  margin-top: 25px;
+    width: 200px;
+    border-radius: 10px;
+    background-image: url('https://free4kwallpapers.com/uploads/originals/2022/08/28/porsche-wallpaper.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    grid-row: 2 / span 2;
+    color: red;
+}
+/* .box6{ */
+    /* background-image: url('../image/15.png'); */
+    /* background-color: ;
+    background-size: 100% 70%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: chartreuse;
+    mix-blend-mode: multiply;
+} */
+.box7{
+    background-image: url('../image/3.gif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: red;
+}
+.box8{
+    background-image: url('../image/4.gif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: red;
+}
+.box9{
+    background-image: url('../image/70.gif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: red;
+}
+.rana10{
+    background-image: url('../image/12.gif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    
+}
+a{
+    color: rgb(0, 0, 0);
+
+}
+.rana11{
+    background-image: url(' ../image/6.gif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: red;
+}
+.rana12{
+    background-image: url('../image/14.gif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: red;
+}
+.rana13{
+    background-image: url('../image/29.avif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: red;
+}
+.rana14{
+    background-image: url('../image/31.gif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: red;
+}
+.rana15{
+    background-image: url('../image/32.gif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: red;
+}
+.rana16{
+    background-image: url('../image/39.gif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: red;
+}
+.rana17{
+    background-image: url('../image/44.gif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: red;
+}
+.rana18{
+    background-image: url('../image/45.webp');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: red;
+}
+.rana19{
+    background-image: url('../image/47.gif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: red;
+}
+.great20{
+    background-image: url('../image/48.gif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: red;
+}
+.great21{
+    background-image: url('../image/49.gif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: red;
+}
+.great22{
+  background-image: url('../image/71.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  color: red;
+}
+.rana22{
+    background-image: url('../image/33.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: red;
+}
+.rana23{
+    background-image: url('../image/33.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: red;
+}
+.box10,
+.box11,
+.box12,
+.box13,
+.box14,
+.box15,
+.box16,
+.rana17,
+.rana18,
+.rana19,
+.great20,
+.great21,
+.great22,
+.rana22,
+.rana23{
+    border-radius: 10px;
+    /* background-image: url('https://free4kwallpapers.com/uploads/originals/2015/10/02/wild-flowers.jpg'); */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: rgb(0, 0, 0);
+    margin-right: 0;
+}
+.rana17,
+.rana18,
+.rana19,
+.great20,
+.great21,
+.great22,
+.rana22,
+.rana23{
+    color: rgb(0, 0, 0);
+    margin-top: 30px;
+    margin-right: 15px;
+}
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6{
+    color: rgb(0, 0, 0);
+    /* color: rgb(255, 0, 0); */
+
+}
+
+
+
+.box7,
+.box8,
+.box9,
+.rana10,
+.rana11,
+.rana12,
+.rana13,
+.rana14,
+.rana15,
+.rana16
+{
+    margin-top: 25px;
+    margin-right: 15px;
+}
+.main-content{
+  border-radius: 10px;
+  background-image: url('../image/63.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* height: 200px; */
+  grid-column:  1/ -1;
+  color: rgb(255, 0, 0);
+  height: 340px;
+}
+footer{
+    border-radius: 10px;
+    background-image: url('../image/64.jfif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* height: 200px; */
+    grid-column:  1/ -1;
+    color: rgb(255, 0, 0);
+    height: 940px;
+}
+
+#shpm{
+    border-radius: 10px;
+    /* background-image: url('../image/64.jfif'); */
+    /* background-size: 100% 100%; */
+    /* background-repeat: no-repeat; */
+    /* height: 200px; */
+    grid-column:  1/ -1;
+    color: rgb(255, 0, 0);
+    height: 940px;
+
+}
+#shpm{
+   width:  100vw;
+     /* height: 90%; */
+     /* 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9RHO9AgLJJaI20PTZwGTDQkWXS3sEFEG0mEzLxTHc5kzrZz-HkraiIKvCuYAWQSEV-xo&usqp=CAU */
+     /* background-image: url('https://free4kwallpapers.com/uploads/originals/2022/08/28/porsche-wallpaper.jpg'); */
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+     /* box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; */
+     /* padding: 12px;  */
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     /* grid-template-rows: 80px 200px 200px 300px; */
+     grid-gap: 10px;
+  
+}
+#shpm div{
+  width: 200px;
+  height: 400px;
+  /* margin-top: 10%; */
+  /* text-align: center; */
+}
+#shp1{
+  background-image: url('../image/73.gif');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#shp2{
+  position: relative;
+  grid-column: 1 / span 3; 
+  background-image: url('../image/75.gif');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#shp3{
+  /* grid-area: 5 / 1 3/1; */
+  grid-column: 5 / span -2; 
+  background-image: url('../image/76.gif');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#shp4{
+  grid-column: 5 / span 8; 
+  background-image: url('../image/74.gif');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#top{
+  margin: 5px;
+  width: 50px;
+	height:50px;
+	position: fixed;
+	margin-right: 55px;
+	right: 0;
+	bottom: 0;
+  border-radius: 60%;
+}
+
+#top1{
+  margin: 5px;
+  width: 50px;
+	height:50px;
+	position: fixed;
+	margin-right: 110px;
+	right: 0;
+	bottom: 0;
+    border-radius: 50%;
+}
+#top2{
+  margin: 5px;
+  width: 50px;
+	height:50px;
+	position: fixed;
+	margin-right: 0px;
+	right: 0;
+	bottom: 0;
+  border-radius: 50%;
+
+}
+
+.itemstext{
+    color: darkblue;
+}
+.items{
+    width: 100%;
+    height: 900px;
+    background-color: rgb(63, 116, 222);
+}
+/* @media screen and (max-width: 1600px){
+  .itemstext{
+    color: darkblue;
+}
+.items{
+    width: 100%;
+    height: 900px;
+    background-color: rgb(237, 212, 27);
+}
+
+}
+
+@media screen and (max-width: 1230px){
+  
+/* .box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6,
+.box7,
+.box8,
+.box9,
+.rana10,
+.rana11,
+.rana12,
+.rana13,
+.rana14,
+.rana15,
+.rana16,
+.rana17,
+.rana18,
+.rana19,
+.great20,
+.great21,
+.great22,
+.rana22,
+.rana23{
+    padding: 12px; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+} */
+
+
+.itemstext{
+    color: darkblue;
+}
+.items{
+    width: 100%;
+    height: 900px;
+    background-color: rgb(162, 30, 169);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+/* } */ 
+/* @media screen and (max-width: 750px){
+  
+  .itemstext{
+      color: darkblue;
+  }
+  .items{
+      width: 100%;
+      height: 900px;
+      background-color: rgb(94, 4, 4);
+  }
+  }
+
+@media screen and (max-width: 320px){
+  
+  .itemstext{
+      color: darkblue;
+  }
+  .items{
+      width: 100%;
+      height: 900px;
+      background-color: rgb(114, 203, 14);
+  }
+} */
+
+
+/* #Jewellery{
+    width:  100vw; */
+    /* padding: 12px;  */
+    /* display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px 200px 200px 300px;
+    grid-gap: 5px;
+} */
+.hero{
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 250px 250px 250px 250px;
+    gap: 5px;
+    justify-items: center;
+}
+.hero > article {
+    width: 300px;
+  }
+  .jewellery1{
+    background-image: url('../image/53.gif');
+  }
+  .jewellery2{
+    background-image: url('../image/41.gif');
+  }
+  .jewellery3{
+    background-image: url('../image/1.gif');
+  }
+  .jewellery4{
+    background-image: url('../image/50.gif');
+  }
+  .jewellery5{
+    background-image: url('../image/54.gif');
+  }
+  .jewellery6{
+    background-image: url('../image/55.gif');
+  }
+  .jewellery7{
+    background-image: url('../image/69.gif');
+  }
+  .jewellery8{
+    background-image: url('../image/67.gif');
+  }
+  .jewellery9{
+    background-image: url('../image/61.gif');
+  }
+  .jewellery10{
+    background-image: url('../image/59.gif');
+  }
+  .jewellery11{
+    background-image: url('../image/60.gif');
+  }
+  .jewellery12{
+    background-image: url('../image/68.gif');
+  }
+
+
+.jewellery1,
+.jewellery2,
+.jewellery3,
+.jewellery4,
+.jewellery5,
+.jewellery6,
+.jewellery7,
+.jewellery8,
+.jewellery9,
+.jewellery10,
+.jewellery11,
+.jewellery12{
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+.shoes1{
+    background-image: url('../papa_slepat/1.jpeg');
+  }
+  .shoes2{
+    background-image: url('../papa_slepat/2.jpeg');
+  }
+  .shoes3{
+    background-image: url('../papa_slepat/3.jpeg');
+  }
+  .shoes4{
+    background-image: url('../papa_slepat/4.jpeg');
+  }
+  .shoes5{
+    background-image: url('../papa_slepat/5.jpeg');
+  }
+  .shoes6{
+    background-image: url('../papa_slepat/6.jpeg');
+  }
+  .shoes7{
+    background-image: url('../papa_slepat/7.jpeg');
+  }
+  .shoes8{
+    background-image: url('../papa_slepat/8.jpeg');
+  }
+  .shoes9{
+    background-image: url('../papa_slepat/9.jpeg');
+  }
+  .shoes10{
+    background-image: url('../papa_slepat/10.jpeg');
+  }
+  .shoes11{
+    background-image: url('../papa_slepat/11.jpeg');
+  }
+  .shoes12{
+    background-image: url('../papa_slepat/12.jpeg');
+  }
+
+/* #antique_slippers{
+  margin: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 250px 250px 250px 250px;
+  gap: 5px;
+  justify-items: center;
+} */
+
+.antique_slippers{
+  margin: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 250px 250px 250px 250px;
+  gap: 5px;
+  justify-items: center;
+}
+
+.antique_slippers1,
+.antique_slippers2,
+.antique_slippers3,
+.antique_slippers4,
+.antique_slippers5,
+.antique_slippers6{
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.antique_slippers > article {
+  width: 300px;
+}
+
+  .antique_slippers1{
+    background-image: url('../papa_slepat/1.jpeg');
+  }
+  .antique_slippers2{
+    background-image: url('../papa_slepat/2.jpeg');
+  }
+  .antique_slippers3{
+    background-image: url('../papa_slepat/3.jpeg');
+  }
+  .antique_slippers4{
+    background-image: url('../papa_slepat/4.jpeg');
+  }
+  .antique_slippers5{
+    background-image: url('../papa_slepat/5.jpeg');
+  }
+  .antique_slippers6{
+    background-image: url('../papa_slepat/6.jpeg');
+  }
+
+
+.shoes1,
+.shoes2,
+.shoes3,
+.shoes4,
+.shoes5,
+.shoes6,
+.shoes7,
+.shoes8,
+.shoes9,
+.shoes10,
+.shoes11,
+.shoes12{
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#additem{
+  background-image: url('../image/65.webp');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
