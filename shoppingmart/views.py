@@ -1,11 +1,15 @@
 
-from django.http import HttpResponse
+from django.http import HttpResponse,FileResponse
 from django.shortcuts import render
 import json
-from . import views
+from django.views.generic import TemplateView
+from django.core.files.storage import FileSystemStorage
+
 
 def home(request):
     return render(request, 'home.html')
+def purchase(request):
+    return render(request, 'purchase.html')
 
 
 def contact(request):
@@ -43,7 +47,7 @@ def contact(request):
                         'user_age': user.age,
                         'user_city': user.city,
                         'user_job': user.job
-                    }                    
+                    }
                     with open('UserContactPageData.json', 'a') as d:
                         json.dump(output, d, indent=4)
                     return render(request, 'contact.html', output)
@@ -77,7 +81,7 @@ def index(request):
 
                             def member_image(self):
                                 return self.image
-                            
+
                             def member_city(self):
                                 return self.city
 
@@ -92,8 +96,19 @@ def index(request):
                             'user_image': user.image,
                             'user_city': user.city,
                             'user_job': user.job
-                        }                    
+                        }
                         with open('UserData.json', 'a') as d:
                             json.dump(output, d, indent=4)
                         return render(request, 'index.html', output)
     return render(request, 'index.html')
+
+def upload(request):
+    if request.method == 'POST':
+        uploaded_file = request.FILES['document']
+        fs = FileSystemStorage()
+        filename = fs.save(uploaded_file.name, uploaded_file)
+        uploaded_file_url = fs.url(filename)
+        return render(request, 'upload.html', {
+            'uploaded_file_url': uploaded_file_url
+        })
+    return render(request, 'upload.html')

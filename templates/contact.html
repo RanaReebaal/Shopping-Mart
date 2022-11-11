@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% load static %}
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../static/css/contact.css">
+  <link rel="shortcut icon" href="../static/image/90.png" type="image/x-icon">
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <!-- Google Fonts -->
@@ -25,7 +26,8 @@
             alt="Sample image">
         </div>
         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-          <form action="/contact" method="GET" >
+          <form action="/contact" method="GET">
+            {% csrf_token %}
             <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
               <p class="lead fw-normal mb-0 me-3">Sign in with</p>
               <button type="button" class="btn btn-primary btn-floating mx-1">
@@ -46,7 +48,7 @@
             </div>
 
 
-            
+
             <!-- Email input -->
             <div class="form-outline mb-4">
               <input type="text" id="name" name="us_name" class="form-control form-control-lg"
@@ -129,3 +131,6 @@
 </body>
 
 </html>
+
+
+
